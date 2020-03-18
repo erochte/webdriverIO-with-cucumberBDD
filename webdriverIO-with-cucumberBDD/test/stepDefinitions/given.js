@@ -5,6 +5,8 @@ import searchPage from '../pageobjects/search.page';
 import addToCartPage from '../pageobjects/addtocart.page';
 import comparePage from '../pageobjects/compare.page';
 import contactusPage from '../pageobjects/contactus.page';
+import wishlistPage from '../pageobjects/wishlist.page';
+
 
 Given('I am on the login page', function () {
   // Write code here that turns the phrase above into concrete actions
@@ -40,4 +42,10 @@ Given('I am on the contact us page', function () {
   browser.getTitle().should.equal('Your store. Contact Us');
   contactusPage.submit();
   contactusPage.isnoNameText().should.be.true;
+});
+
+Given('I am on the video game page', function () {
+  browser.maximizeWindow();
+  wishlistPage.open();
+  browser.getTitle().should.equal('Your store. Video Games');
 });
