@@ -3,7 +3,7 @@ const defaultTimeoutInterval = process.env.DEBUG ? (60 * 60 * 500) : 90000;
 exports.config = {
 
     specs: [
-        './test/features/*wishlist.feature',
+        './test/features/*logout.feature',
     ],
     // Patterns to exclude.
     exclude: [
@@ -34,6 +34,7 @@ exports.config = {
               // platform: 'Windows 10',
               // version: '50.0',
               maxInstances: '5',
+              
           },
           //
           // {

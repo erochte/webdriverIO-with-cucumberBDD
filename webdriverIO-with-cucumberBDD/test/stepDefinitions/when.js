@@ -6,6 +6,8 @@ import addToCartPage from '../pageobjects/addtocart.page';
 import comparePage from '../pageobjects/compare.page';
 import contactusPage from '../pageobjects/contactus.page';
 import wishlistPage from '../pageobjects/wishlist.page';
+import logoutPage from '../pageobjects/logout.page';
+
 
 When(/^I login with email and password "([^"]*)" "([^"]*)" into the text box$/, function (arg1, arg2) {
     loginPage.login(arg1, arg2);
@@ -33,4 +35,8 @@ When(/^I submit name, email and enquiry "([^"]*)" "([^"]*)" "([^"]*)" in the tex
 
 When(/^I click to add item to wishlist$/, function () {
     wishlistPage.wishlistClick();
+});
+
+When(/^I login using email and password "([^"]*)" "([^"]*)" into the text box$/, function (arg1, arg2) {
+    logoutPage.loginPage(arg1, arg2);
 });

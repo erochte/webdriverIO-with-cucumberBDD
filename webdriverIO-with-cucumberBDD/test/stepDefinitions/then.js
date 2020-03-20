@@ -6,6 +6,8 @@ import addToCartPage from '../pageobjects/addtocart.page';
 import comparePage from '../pageobjects/compare.page';
 import contactusPage from '../pageobjects/contactus.page';
 import wishlistPage from '../pageobjects/wishlist.page';
+import logoutPage from '../pageobjects/logout.page';
+
 
 
 Then('I should see the logout link', function() {
@@ -37,4 +39,8 @@ Then('I should see the success banner', function() {
 
 Then('I should see the items on the wishlist page', function() {
   wishlistPage.iswishlistVisible().should.be.true;
+});
+
+Then('I should see the login link', function() {
+  logoutPage.isLoginLinkShowing().should.be.true;
 });

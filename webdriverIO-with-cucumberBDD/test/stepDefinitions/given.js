@@ -6,6 +6,7 @@ import addToCartPage from '../pageobjects/addtocart.page';
 import comparePage from '../pageobjects/compare.page';
 import contactusPage from '../pageobjects/contactus.page';
 import wishlistPage from '../pageobjects/wishlist.page';
+import logoutPage from '../pageobjects/logout.page';
 
 
 Given('I am on the login page', function () {
@@ -45,7 +46,11 @@ Given('I am on the contact us page', function () {
 });
 
 Given('I am on the video game page', function () {
-  browser.maximizeWindow();
   wishlistPage.open();
   browser.getTitle().should.equal('Your store. Video Games');
+});
+
+Given('I am on the home page', function () {
+  logoutPage.open();
+  browser.getTitle().should.equal('Your store. Login');
 });
